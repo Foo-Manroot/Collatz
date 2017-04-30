@@ -67,7 +67,6 @@ int main (int argc, char* argv[])
 	/* Llama a la función para generar los números de la serie */
 	if ((cod_salida = collatz (inicio, 0)) == SUCCESS)
 	{
-
 		printf ("\n---- FIN DE LA SERIE ----\n");
 	}
 
