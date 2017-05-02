@@ -31,8 +31,6 @@ collatz ()
 
 	while [[ "$valor" -gt 1 ]]
 	do
-		printf "Paso %5i: %10li\n" $paso $valor
-
 		if [[ $((valor % 2)) -eq 0 ]]
 		then
 			valor=$((valor / 2))
@@ -41,6 +39,8 @@ collatz ()
 		fi
 
 		paso=$((paso + 1))
+
+		printf "Paso %5i: %10li\n" $paso $valor
 	done
 }
 
