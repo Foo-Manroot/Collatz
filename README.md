@@ -1,4 +1,13 @@
 # Collatz
-Este pequeño programa permite imprimir por pantalla la serie formada siguiendo la [conjetura de Collatz](https://en.wikipedia.org/wiki/Collatz_conjecture).
+  This repository was created as a response to a internship offer, where we were told to create a simple program to calculate the [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture).
 
-Para ejecutarlo, simplemente hay que compilar con `make` y llamar al programa con `./collatz <inicio_de_la_serie>`.
+  As I saw that this repository was no longer needed, I decide to use it to train my knowledge on different languages, and learn new ones. Every folder is dedicated to each one implementation on a given language. In these folders there should be another README to explain how to run the program, if needed (even without any instructions, it should be pretty straight-forward).
+
+  Also, this repository can be used to back my claims of knowledge (at least on a basic level) on a given language.
+
+## Languages
+  These are the currently available iumplementations, each one in their corresponding folder:
+  - C (this was the original, the one used for the internship offer)
+  - Scala
+  - Bash
+  - Lisp
