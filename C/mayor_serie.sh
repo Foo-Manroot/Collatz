@@ -1,3 +1,10 @@
+# ----
+# Script para calcular todas las series entre 1 y $MAX (o $1, si se especifica)
+# y obtener la más larga de todas (la que requiera un mayor número de pasos para llegar
+# al 1.
+# ----
+
+
 # Número máximo hasta el que se calcularán las series
 MAX=1000
 FICHERO=pasos
@@ -6,7 +13,14 @@ make
 
 echo -e "\n--- COMIENZO DE LA EJECUCIÓN ----\n"
 
-for i in $(seq $MAX)
+if [[ "$#" -eq 1 ]]
+then
+	MAX="$1"
+fi
+
+i=0
+while [[ $i -le $MAX ]]
+#for i in $(seq $MAX)
 do
 	if [[ $((i % 100)) == 0 ]]
 	then
@@ -17,6 +31,8 @@ do
 	salida=$(./collatz $i | awk '{ if (match ($0, "^Paso[ ]*[0-9]+:[ ]*1$")) { split ($0, array, " ");  printf ("%5s\n", substr(array[2],1,length(array[2] - 1)) ); } }')
 
 	printf "%5s: %5s pasos\n" "$i" "$salida" >> "$FICHERO"
+
+	i=$((i + 1))
 done
 
 # Ordena el fichero con los pasos y obtiene el mayor
