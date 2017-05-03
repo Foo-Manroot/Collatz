@@ -11,3 +11,4 @@
   - Scala
   - Bash
   - Lisp
+  - Prolog
