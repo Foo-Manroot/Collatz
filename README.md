@@ -12,3 +12,4 @@
   - Bash
   - Lisp
   - Prolog
+  - Python
