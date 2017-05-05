@@ -9,10 +9,10 @@ all: collatz
 
 # Reglas para compilar "collatz"
 collatz: collatz.o
-	$(GCC) $(FLAGS) -o collatz collatz.o
+	$(GCC) $(FLAGS) -o $@ $^
 
-collatz.o: collatz.h collatz.c
-	$(GCC) $(FLAGS) $(OBJFLAGS) -o collatz.o collatz.c
+collatz.o: collatz.c collatz.h
+	$(GCC) $(FLAGS) $(OBJFLAGS) -o $@ $<
 
 
 # Elimina todos los ficheros objeto y ejecutables
