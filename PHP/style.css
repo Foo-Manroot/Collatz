@@ -1,0 +1,16 @@
+* {
+	/* Declaración de variables para los colores */
+	--fondo: rgb(30, 30, 30);
+	--texto: rgb(180, 180, 180);
+}
+
+html {
+	background: var(--fondo);
+	color: var(--texto);
+}
+
+#main {
+	white-space: pre-wrap;
+	display: table;
+	margin: 0 auto;
+}
