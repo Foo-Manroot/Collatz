@@ -15,3 +15,4 @@
   - Python
   - PHP
   - Java
+  - LOLCODE
