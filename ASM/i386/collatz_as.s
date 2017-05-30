@@ -33,7 +33,7 @@ _start:
 	pushl	4(%ebp)
 	pushl	$form_err_args
 	call	printf
-	add	$8, %ebp
+	add	$8, %esp
 
 	pushl	$-1
 	call	exit
@@ -46,19 +46,20 @@ cont:
 	# Obtiene en EAX el valor numérico de argv [1]
 	pushl	%eax
 	call	obtener_arg
-	add	$4, %ebp
+	add	$4, %esp
 
 	# printf ($form_inicio, argv [1]).
 	pushl	%eax
 	pushl	$form_inicio
 	call	printf
-	add	$8, %ebp
+	add	$4, %esp
+	popl	%eax
 
 
 	# printf ($msg_fin)
-	pushl $msg_fin
-	call printf
-	add $4, %ebp
+	pushl	$msg_fin
+	call	printf
+	add	$4, %esp
 
 	pushl	$0
 	call	exit
