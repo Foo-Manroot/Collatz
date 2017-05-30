@@ -7,15 +7,15 @@
 		.asciz "Error -> Llamada correcta: \n\t%s <número_inicial>\n"
 	form_inicio:
 		.asciz "\nNúmero inicial: %i\n"
+	msg_fin:
+		.asciz "\n---- FIN DE LA SERIE ----\n"
+
 
 	form_hex:
 		.asciz "Hexadecimal: %x\nEntero: %i\n"
 
 	form_debug:
 		.asciz "DEBUG: %i\n"
-
-.section .data
-	argv_1: .long 0 # Variable para almacenar el puntero a argv [1]
 
 .section .text
 .globl _start
@@ -42,19 +42,23 @@ _start:
 cont:
 	# Obtiene el puntero a argv [1]
 	movl	8(%ebp), %eax
-	movl	%eax, argv_1
 
-	pushl	argv_1
+	# Obtiene en EAX el valor numérico de argv [1]
+	pushl	%eax
 	call	obtener_arg
 	add	$4, %ebp
 
-	# printf ($form_hex, argv [1], argv [1]).
-	# argv [1] se guardó antes en argv_1
+	# printf ($form_inicio, argv [1]).
 	pushl	%eax
-	pushl	%eax
-	pushl	$form_hex
+	pushl	$form_inicio
 	call	printf
-	add	$16, %ebp
+	add	$8, %ebp
+
+
+	# printf ($msg_fin)
+	pushl $msg_fin
+	call printf
+	add $4, %ebp
 
 	pushl	$0
 	call	exit
