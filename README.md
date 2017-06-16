@@ -16,3 +16,4 @@
   - PHP
   - Java
   - LOLCODE
+  - Ruby

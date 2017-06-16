@@ -3,13 +3,13 @@
 import sys
 
 
-# Función para implementar el bucle principa
-#
-# @param num
-#           Número cuya serie va a ser impresa
-#
 def collatz (num):
+    """
+    Función para implementar el bucle principal
 
+     Args:
+        num -> Número cuya serie va a ser impresa
+    """
     paso = 0
     while num > 1:
         if (num % 2) == 0:
@@ -19,7 +19,7 @@ def collatz (num):
             num += 1
 
         paso += 1
-	print "Paso %5i: %10li" % (paso, num)
+        print "Paso %5i: %10li" % (paso, num)
 
     return
 
