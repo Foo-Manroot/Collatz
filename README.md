@@ -7,6 +7,7 @@
 
 ## Languages
   These are the currently available iumplementations, each one in their corresponding folder:
+
   - C (this was the original, the one used for the internship offer)
   - Scala
   - Bash
@@ -17,3 +18,4 @@
   - Java
   - LOLCODE
   - Ruby
+  - AWK
