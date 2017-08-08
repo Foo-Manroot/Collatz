@@ -8,9 +8,12 @@ object Collatz {
 
     val n = comprobar_arg (args)
 
-    println ("\nNúmero inicial: " + n + "\n")
-    collatz (n)
-    println ("---- FIN DE LA SERIE ----")
+    if (n > 1) {
+
+      println ("\nNúmero inicial: " + n + "\n")
+      collatz (n)
+      println ("---- FIN DE LA SERIE ----")
+    }
   }
 
   /**
