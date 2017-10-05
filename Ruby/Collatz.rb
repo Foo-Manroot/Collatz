@@ -6,7 +6,7 @@
 =end
 class String
 	def es_entero_positivo?
-		/^[+]?\d+$/.match?(self)
+		/^[+]?\d+$/.match? (self)
 	end
 end
 

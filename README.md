@@ -17,5 +17,7 @@
   - PHP
   - Java
   - LOLCODE
+  - ASM - i386
   - Ruby
   - AWK
+  - C++
