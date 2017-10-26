@@ -5,7 +5,7 @@
  * Si es el último, sale con código SUCCES.
  *
  * Argumentos:
- *	n 	-	Número anterior en la serie.
+ *	n	-	Número anterior en la serie.
  *	paso	-	Paso actual en la recursividad.
  *
  *

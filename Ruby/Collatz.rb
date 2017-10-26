@@ -28,7 +28,7 @@ class Collatz
 	# a yield(@num, paso).
 	#
 	# Args:
-	# 	paso -> Contador del paso actual. Por defecto, es 0.
+	#	paso -> Contador del paso actual. Por defecto, es 0.
 	#
 	def calc_serie(paso=0)
 
